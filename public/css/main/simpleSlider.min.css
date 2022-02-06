@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/*!
+ * SimpleSlider v1.9.0
+ * Simple responsive slider created in pure javascript.
+ * https://github.com/michu2k/SimpleSlider
+ * 
+ * Copyright 2017-2019 Michał Strumpf
+ * Published under MIT License
+ */
+
+ .slider-cont{
+     position: relative;
+     padding-left: 20px;
+     padding-right: 20px;
+ }
+
+.simple-slider{
+    overflow:hidden;
+}
+
+.simple-slider .slider-wrapper{
+    height:100%;
+    position:relative;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+    -webkit-transition-timing-function:cubic-bezier(.7,0,.3,1);
+    transition-timing-function:cubic-bezier(.7,0,.3,1)
+}
+
+.simple-slider .slider-slide{
+    background-size:cover;
+    background-position:center top;
+    height:100%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    float:left
+}
+
+
+.simple-slider .slider-btn{
+    width:30px;
+    height:50px;
+    top:50%;
+    cursor:pointer;
+    background-repeat:no-repeat;
+    position:absolute;
+    -webkit-transform:translate(0,-50%);
+    transform:translate(0,-50%);
+}
+
+.simple-slider .slider-btn.slider-btn-prev{
+    left: 0px;
+}
+
+.simple-slider .slider-btn.slider-btn-next{
+    right: 0px;
+}
+
+
+
+#arrow-leftt{
+    color: rgb(171, 171, 171);
+    padding: 7px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    background-color: rgb(236, 236, 236);
+    font-size: 20px;
+}
+
+#arrow-rightt{
+    color: rgb(171, 171, 171) !important;
+    padding: 7px !important;
+    border: 1px solid transparent !important;
+    border-radius: 100% !important;
+    background-color: rgb(236, 236, 236) !important;
+    font-size: 20px !important;
+}
+
+.slider-slide:hover{
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width:1023px){
+
+    .slider-slide img{
+        width: 100%;
+        height: 420px;
+    }
+    
+    }
+
+@media only screen and (max-width:768px){
+
+    .slider-slide img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    }
+

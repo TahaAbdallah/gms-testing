@@ -1,0 +1,461 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 200;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+
+
+html {
+    --scrollbarBG: rgb(213, 213, 213);
+    --thumbBG: black;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 5px;
+    border: 1px solid var(--scrollbarBG);
+}
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: linear-gradient(to bottom right, red 0%, #e35353 100%);
+    overflow-x: hidden;
+
+}
+
+.nav-cont {
+    transition: 0.3s ease;
+}
+
+.nav {
+    background-color: rgba(255, 0, 0, 0.652);
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.275);
+}
+
+.nav li a {
+    color: white;
+    font-size: 14px;
+}
+
+.nav li a:hover {
+    color: rgb(211, 211, 211);
+}
+
+.nav li p {
+    color: white;
+}
+
+
+.arrow {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+}
+
+.fa-arrow-alt-circle-down {
+    color: red;
+    font-size: 40px;
+    transition: 0.3s ease;
+}
+
+.none {
+    margin-top: -60px;
+}
+
+.disp {
+    margin-top: 0;
+}
+
+.arrowNoRotate {
+    transform: rotate(0deg);
+}
+
+.arrowRotate {
+    transform: rotate(180deg);
+}
+
+
+/* ################################################### */
+
+@media only screen and (max-width:1023px) {
+
+    .none {
+        margin-top: -95px;
+    }
+
+}
+
+@media only screen and (max-width:515px) {
+
+    .none {
+        margin-top: -170px;
+    }
+
+}
+
+.logged-from-desktop {
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:768px) {
+
+    .logged-from-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:769px) {
+
+    .check-in-form {
+        display: none;
+    }
+}
+
+
+/* ################################################### */
+
+
+.main-cont {
+    height: 100vh;
+}
+
+h3 {
+    color: white;
+    font-weight: 400;
+}
+
+h5 {
+    color: black;
+    font-weight: 100;
+}
+
+h6 {
+    color: white;
+    font-weight: 200;
+}
+
+.table {
+    background-color: #fff;
+    border: 2px solid black !important;
+    box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.487);
+
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: fit-content;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: rgb(213, 213, 213);
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid rgb(213, 213, 213);
+}
+
+.table td {
+    border: 1px solid grey !important;
+}
+
+.table td p {
+    font-weight: 500;
+}
+
+.table th {
+    border: 1px solid grey !important;
+}
+
+.emp-names {
+    color: red;
+    font-weight: 500;
+}
+
+.emp-names:hover {
+    color: black;
+    font-weight: 500;
+}
+
+/* ################ monthly TABLE  */
+
+.monthly-cont {
+    background-color: #fff;
+    border: 2px solid black;
+    box-shadow: 7px 5px 12px rgba(0, 0, 0, 0.487);
+}
+
+.table-col {
+    border: 1px solid grey;
+}
+
+.data {
+    border-top: 1px solid black;
+
+}
+
+
+.arrow-back-cont {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.arrow-back-cont a {
+    color: white;
+    font-weight: 700;
+}
+
+.fa-arrow-left {
+    color: white;
+}
+
+.arrow-back-cont h4 {
+    color: white;
+    font-weight: 700;
+}
+
+.arrow-back-cont img {
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+
+#check-links {
+    outline: 0;
+    background-color: white;
+    border: 0;
+    padding: 10px 15px;
+    color: #000000;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: 0.25s;
+    text-decoration: none;
+}
+
+#check-links:hover {
+    text-decoration: none;
+}
+
+#check-links-disabled {
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0;
+    padding: 10px 15px;
+    color: #000000;
+    border-radius: 3px;
+    width: 250px;
+    cursor: auto;
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: 0.25s;
+    margin: 10px;
+}
+
+.delay {
+    font-family: Source Sans Pro;
+    font-weight: bold;
+    color: white;
+}
+
+.delay input {
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid grey;
+}
+
+/* ######################### BARCODE ERROR PAGE ######################### */
+
+.barcode-cont {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barcode-sm-cont {
+    text-align: center;
+}
+
+.barcode-sm-cont h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+.barcode-sm-cont h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+.emp-img img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+
+/* ############################################## BUBBLES  */
+
+.bg-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-bubbles li {
+    position: absolute;
+    list-style: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    bottom: -150px;
+    -webkit-animation: square 25s infinite;
+    animation: square 25s infinite;
+    transition-timing-function: linear;
+}
+
+.bg-bubbles li:nth-child(1) {
+    left: 10%;
+}
+
+.bg-bubbles li:nth-child(2) {
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 17s;
+    animation-duration: 17s;
+}
+
+.bg-bubbles li:nth-child(3) {
+    left: 25%;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.bg-bubbles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation-duration: 22s;
+    animation-duration: 22s;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.bg-bubbles li:nth-child(5) {
+    left: 70%;
+}
+
+.bg-bubbles li:nth-child(6) {
+    left: 80%;
+    width: 120px;
+    height: 120px;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bg-bubbles li:nth-child(7) {
+    left: 32%;
+    width: 160px;
+    height: 160px;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
+.bg-bubbles li:nth-child(8) {
+    left: 55%;
+    width: 20px;
+    height: 20px;
+    -webkit-animation-delay: 14s;
+    animation-delay: 14s;
+    -webkit-animation-duration: 40s;
+    animation-duration: 40s;
+}
+
+.bg-bubbles li:nth-child(9) {
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 40s;
+    animation-duration: 40s;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-bubbles li:nth-child(10) {
+    left: 90%;
+    width: 160px;
+    height: 160px;
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+@-webkit-keyframes square {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-700px) rotate(600deg);
+    }
+}
+
+@keyframes square {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-700px) rotate(600deg);
+    }
+}
+
+
+@media only screen and (max-width:400px) {
+    .wrapper {
+        overflow: auto;
+    }
+}

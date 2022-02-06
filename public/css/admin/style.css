@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+    background-color: rgb(249,249,249);
+    box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+/*------scroll bar---------------------*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #525965;
+    border: 0px none #ffffff;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #525965;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: #525965;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  
+
+
+
+
+/* SIDEBAR ------  */
+
+
+/* SCROLL BAR  */
+.sidebar-cont-desktop::-webkit-scrollbar {
+    width: 3px;
+    height: auto;
+  }
+  
+
+.sidebar-cont-desktop::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+.sidebar-cont-desktop::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+.sidebar-cont-desktop::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+
+.sidebar-cont-desktop{
+    background-color: #000;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    overflow-y: scroll;
+    width: 25%;
+    left: 0;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+
+#closing{
+    color: red;
+    font-weight: 700;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.welcome-cont-desktop{
+    display: block;
+}
+
+
+/* LOGO --------- */
+
+.logo-title1{
+    color: white;
+    font-weight: 700;
+}
+
+.logo-title2{
+    color: white;
+    font-weight: 300;
+    margin-top: -8px !important;
+}
+
+/* USER SECTION ---- */
+
+.sidebar-user-img{
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.username{
+    color: white;
+    font-weight: 700;
+    font-family: montserrat;
+}
+
+.user-welcome{
+    color: white;
+    font-weight: 300;
+    margin-top: -8px !important;
+    font-family: montserrat;
+}
+
+.fa-window-close{
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+}
+
+/* SECTIONS ------  */
+
+.section-title{
+    color: white;
+    font-family: montserrat;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card{
+    border: none !important;
+    background-color: rgb(77, 77, 77);
+}
+
+.card i{
+    color: rgb(240, 240, 240);
+    margin-right: 8px;
+}
+
+.card h5{
+    color: white;
+    font-weight: 300;
+    font-family: montserrat;
+}
+
+.card-header{
+    background-color: #000;
+    border-bottom: 1px solid white;
+}
+
+.fa-arrow-down{
+    font-size: 12px;
+    color: rgb(219, 219, 219) !important;
+}
+
+.card-body{
+    background-color:rgb(77, 77, 77);
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.card-body a{
+    color: rgb(190, 190, 190);
+    font-family: lato;
+}
+
+.card-body P{
+    margin: 16px 0px;
+}
+
+.card-body-div{
+    border-bottom: 1px solid #999;
+}
+
+.sidebar-links{
+    padding: 12px 20px;
+    border-bottom: 1px solid white;
+}
+
+.sidebar-links h5{
+    color: white;
+    font-weight: 300;
+    font-family: montserrat;
+}
+
+.sidebar-links i{
+    color: rgb(240, 240, 240);
+    margin-right: 8px;
+}
+
+/* MAIN CONTAINER --------- */
+
+
+
+
+.main-user-img{
+    width: 45px;
+    height: 45px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.fa-bars{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-times{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+.burger-btn-cont{
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #999;
+    margin: 25px 25px;
+    padding: 5px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+}
+
+
+
+.username-main-page{
+    color: #000;
+    font-weight: 700;
+    font-family: montserrat;
+    padding: 5px;
+}
+
+/* for burger btn  */
+.show{
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.hidden{
+    left: -100%;
+}
+/*-----------------*/
+
+/* ADMINS PAGE ---------- */
+
+.admins-main-page{
+    color: #000;
+    font-weight: 700;
+    font-family: montserrat;
+}
+
+.add-btn{
+    color: white;
+    font-weight: 700;
+    font-family: montserrat;
+    background-color: red;
+    padding: 3px 20px;
+}
+
+.under-burger-btn-cont{
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #999;
+    margin: auto;
+    margin-top: 25px;
+    padding: 5px 0px;
+}
+
+.data-table{
+    width: 95%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.data-table th{
+    background-color: #000;
+    color: white;
+    padding: 5px;
+    margin: 0;
+}
+
+.data-table td,#client-name-table,#table-project-img{
+    background-color: transparent;
+    color: black;
+    padding-left: 5px;
+    font-family: montserrat;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.data-table a{
+    background-color: #fff;
+    color: white;
+    background-color: red;
+    padding: 10px 5px;
+    font-family: montserrat;
+    font-size: 15px;
+    margin: 2px;
+}
+
+.border{
+    border-color: black !important;
+}
+
+.border th{
+    border-color: white !important;
+}
+
+/* OUR SERVICES PAGE ---------- */
+
+.our-services-table{
+    margin: 0 ;
+    padding: 0;
+    width: 95%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.our-services-table h3{
+    background-color: #000;
+    color: white;
+    padding: 5px;
+    margin: 0;
+}
+
+.our-services-img-row{
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    padding-bottom: 15px;
+}
+
+.our-services-parag-row{
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 0px 15px;
+}
+
+.our-services-action-col{
+    border: 5px solid black;
+    padding: 0px 15px;
+}
+
+/* OUR PROJECTS PAGE ---------- */
+
+.client-logo-title,.about-project-title{
+        color: red;
+        padding: 15px 0px;
+        padding-left: 5px;
+        font-family: montserrat;
+        font-weight: 700;
+        font-size: 18px;
+}
+
+.our-projects-col1{
+    border-left: 5px solid black;
+    padding-bottom: 15px;
+}
+
+.our-projects-col2{
+    border-right: 5px solid black;
+    padding-bottom: 15px;
+}
+
+.projects-table{
+    margin: 0 ;
+    padding: 0;
+    width: 95%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.projects-table .col-4,.col-3,.col-12{
+    margin: 0;
+    padding: 0;
+}
+
+.projects-table h3{
+    background-color: #000;
+    color: white;
+    padding: 5px;
+    margin: 0;
+}
+
+.projects-info-row{
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.projects-table p{
+    background-color: #fff;
+    color: red;
+    padding: 15px 0px;
+    padding-left: 5px;
+    font-family: montserrat;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.projects-table-link{
+    background-color: #fff;
+    color: red;
+    padding: 15px 0px;
+    padding-left: 5px;
+    font-family: montserrat;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.projects-table-link:hover{
+    background-color: #fff;
+    color: black;
+    padding: 15px 0px;
+    padding-left: 5px;
+    font-family: montserrat;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.projects-table-links{
+    background-color: #fff;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    font-family: montserrat;
+    font-size: 15px;
+}
+
+
+.projects-table-links:hover{
+    background-color: #fff;
+    color: black;
+    background-color: red;
+    padding: 10px;
+    font-family: montserrat;
+    font-size: 15px;
+}
+
+/* LAYOUT PAGE ---------- */
+
+.layout-cont{
+    background-color: rgb(219, 219, 219);
+}
+
+.add-photo-cont{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* ---------------PROMOS SECTION---------------- */
+
+.promos-cont{
+    padding: 0 50px;
+  }
+
+  @media only screen and (max-width:768px){
+
+    .promos-cont{
+      padding: 0px 10px;
+    }
+  
+  
+  }
+
+.promos-cont img{
+    width: 820px;
+    height: 312px;
+}
+
+.promos-cont h2{
+  font-weight: 900;
+  color: black;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.section2-btn{
+  padding: 10px 25px;
+  font-size: 20px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.644);
+}
+
+.consult-bg{
+  background-color: rgb(241,241,241);
+}
+
+.consultation-btn{
+    color: white !important;
+    font-weight: 500;
+    padding: 7px 10px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.432);
+    text-decoration: none;
+    background: linear-gradient(to left, red 50%, black 50%) right;
+    background-size: 200%;
+    transition: .1s ease-out;
+}
+
+.consultation-btn:hover{
+  text-decoration: none;
+  color: white;
+  background-position: left;
+}
+
+@media only screen and (max-width:425px){
+ 
+  #nav-consult-btn{
+    display: none;
+  }
+
+  #home{
+    display: none;
+  }
+
+}
+
+
+/* BIG NAV ----------------------- */
+
+@media only screen and (min-width:768px){
+  .consultation-btn{
+    font-size: 15px;
+  }
+  
+}
+
+
+/* MEDIA QUERY FOR SIDEBAR  */
+
+
+@media only screen and (max-width:1024px){
+
+    .sidebar-cont-desktop{
+        background-color: #000;
+        height: 100%;
+        position: fixed;
+        overflow-y: scroll;
+        width: fit-content;
+        z-index: 999;
+    }
+
+
+
+    /* ------------------------------ */
+    
+
+}
+
+
+@media only screen and (max-width:768px){
+    
+    .add-btn{
+        color: white;
+        font-weight: 700;
+        font-family: montserrat;
+        background-color: red;
+        padding: 3px 10px;
+        font-size: 12px;
+    }
+
+}
+
