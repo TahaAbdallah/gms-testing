@@ -70,6 +70,25 @@ class ManagerController extends Controller
         return redirect()->route('managerDashboard')->withSuccess('An Employee Is Added Successfully');
     }
 
+    public function allEmployees()
+    {
+        $emp = Employee::all();
+        $today = Carbon::now('GMT+2');
+        return view('managers.employees.allEmployees')
+            ->with('emp', $emp)
+            ->with('today', $today);
+    }
+
+
+    public function empProfile($id)
+    {
+        $emp = Employee::find($id);
+        $today = Carbon::now('GMT+2');
+        return view('managers.employees.profilePage')
+            ->with('emp', $emp)
+            ->with('today', $today);
+    }
+
     // --------------------------------------------------------------------------------------------
 
     // ##### MANAGER DASHBOARD #####

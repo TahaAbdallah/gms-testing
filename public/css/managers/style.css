@@ -273,6 +273,48 @@ h6 {
     padding: 2px;
 }
 
+/* ############################################## EMP PROFILE PAGE  */
+
+
+.emp-profile-cont {
+    background-color: #fff;
+    width: fit-content;
+    padding: 25px 100px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-input-p {
+    margin-bottom: 10px;
+}
+
+.emp-profile-cont input {
+    display: block;
+    outline: #e35353;
+    border-color: #e35353;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.emp-profile-cont button {
+    background-color: #e35353;
+    margin-top: 20px;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    padding: 5px 10px;
+}
+
+
+.emp-profile-cont p {
+    margin: 0px;
+    margin-right: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid #e35353;
+}
+
 
 /* ############################################## BUBBLES  */
 
