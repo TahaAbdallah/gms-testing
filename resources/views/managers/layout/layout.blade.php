@@ -78,7 +78,7 @@
       <div>
         <h4>Hello {{auth('manager')->user()->name}}</h4>
         <div><a href="{{ route('addEmployee') }}"><i class="fa fa-plus-circle mr-2 "></i> Add Employee</a></div>
-        <div><a href=""><i class="fa fa-plus-circle mr-2 "></i> TEST FOR GITHUB</a></div>
+        <div><a href=""><i class="fa fa-plus-circle mr-2 "></i> MAZABAT</a></div>
         <div><a href="{{ route('managerLogout') }}"><i class="fas fa-door-open mr-2"></i> Logout</a></div>
       </div>
     </div>
