@@ -8,16 +8,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="{{URL::asset('css/managers/login.css');}}">
-
+  <link rel="stylesheet" href="{{URL::asset('css/managers/style.css');}}">
 </head>
 
 <body>
 
 
   <div class="wrapper">
+
+    <div class="arrow-back-cont">
+      <div class="row m-0">
+        <div>
+          <img class="mr-2 mb-2" src="{{URL::asset(auth('manager')->user()->profile_img);}}">
+        </div>
+        <div>
+          <h4>Hello {{auth('manager')->user()->name}}</h4>
+          <div><a href="{{ route('addEmployee') }}"><i class="fa fa-plus-circle mr-2 "></i> Add Employee</a></div>
+          <div><a href="{{ route('allEmployees') }}"><i class="fa fa-user mr-2"></i> All Employees</a></div>
+          <div><a href="{{ route('managerLogout') }}"><i class="fas fa-door-open mr-2"></i> Logout</a></div>
+        </div>
+      </div>
+
+      <div class="arrow-back-cont text-left">
+        <div><a href="{{route('managerDashboard')}}"><i class="fas fa-arrow-left mr-2"></i> Back To Weekly
+            Schedule</a>
+        </div>
+      </div>
+    </div>
     <div class="container">
 
       @if(session()->has('success'))
@@ -26,7 +48,8 @@
       </div>
       @endif
 
-      <div><img class="img-fluid" src={{URL::asset('images/ruwwadlubnan2.jpeg')}}></div>
+
+      <div><img class="img-fluid" src="{{ asset('images/GMS - LOGO-1@2x.png') }}"></div>
 
       <h1 class="mt-2">Welcome {{auth('manager')->user()->name}} | Add new Employee</h1>
 
@@ -75,7 +98,9 @@
     </ul>
   </div>
 
+
   <!-- Optional JavaScript -->
+  <script src="{{URL::asset('js/employees/js.js');}}"></script>
   <script src="{{ URL::asset('js/admin/login.js'); }}"></script>
   <script src="{{ URL::asset('js/manager/addEmp.js'); }}"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

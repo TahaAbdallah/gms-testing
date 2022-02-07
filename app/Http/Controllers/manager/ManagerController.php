@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Session;
 use Hash;
+use Illuminate\Support\Facades\File;
 
 
 class ManagerController extends Controller
@@ -41,7 +42,9 @@ class ManagerController extends Controller
     // ##### ADD EMPLOYEE #####
     public function addEmployee()
     {
-        return view('managers.employees.register');
+        $today = Carbon::now('GMT+2');
+        return view('managers.employees.register')
+            ->with('today', $today);
     }
 
     public function processAddEmployee(Request $request)
@@ -88,6 +91,32 @@ class ManagerController extends Controller
             ->with('emp', $emp)
             ->with('today', $today);
     }
+
+    public function empEdit(Request $request, $id)
+    {
+        $emp = Employee::find($id);
+
+        $emp->password = Hash::make($request->password);
+
+        if ($request->hasFile('profile_img')) {
+
+            $old_img = $emp->profile_img;
+
+            if (File::exists($old_img)) {
+                File::delete($old_img);
+            }
+
+            $profile_img = $request->profile_img;
+            $newimg = time() . $profile_img->getClientOriginalName();
+            $profile_img->move('uploads/employees/', $newimg);
+
+            $emp->profile_img = 'uploads/employees/' . $newimg;
+        }
+        $emp->update();
+        return redirect()->back()->withSuccess('Employee Details Updated Successfully');
+    }
+
+
 
     // --------------------------------------------------------------------------------------------
 

@@ -10,7 +10,7 @@
 
 <div class="container-fluid main-cont">
 
-  <div class="text-center"><img class="img-fluid mt-5 mb-3" src="{{URL::asset('images/ruwwadlubnan2.jpeg')}}"
+  <div class="text-center"><img class="img-fluid mt-5 mb-3" src="{{ asset('images/GMS - LOGO-1@2x.png') }}"
       width="150px"></div>
 
   <h3 class="text-center"> {{$emp->name}} December Check-in | Check-out </h3>

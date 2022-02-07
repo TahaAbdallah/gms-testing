@@ -38,6 +38,7 @@ Route::group(['namespace' => 'manager',], function () {
         Route::post('/add-employee', 'ManagerController@processAddEmployee')->name('processAddEmployee');
         Route::get('/all-employees', 'ManagerController@allEmployees')->name('allEmployees');
         Route::get('/employee-profile-page/{id}', 'ManagerController@empProfile')->name('empProfile');
+        Route::put('/employee-edit/{id}', 'ManagerController@empEdit')->name('empEdit');
 
         // ##### MANAGER DASHBOARD #####
         Route::get('/dashboard', 'ManagerController@managerDashboard')->name('managerDashboard');
