@@ -16,8 +16,6 @@
 
   <link rel="stylesheet" href="{{URL::asset('css/employees/style.css');}}">
 
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -26,7 +24,9 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  <title>Gms | Barcode Needed Page</title>
+
+
+  <title>Gms | Employees Check Out</title>
 
 
 </head>
@@ -56,7 +56,7 @@
           <a id="check-links-disabled">Check In</a>
           {{-- <a id="check-links" href="{{route('createCheckOut',['id'=>auth('employee')->user()->id])}}">Check Out</a>
           --}}
-          <button type="submit" id="check-links">Check Out</button>
+          <button id="check-links" class="btn">Check Out</button>
           <p class="mt-5 delay">Reason For Delay : <input type="text" name="reason"></p>
         </form>
 
@@ -80,6 +80,7 @@
 
   <!-- SCRIPTS -->
 
+  <script src="{{ asset('js/employees/btnDisabled.js') }}"></script>
 
 
   <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -88,17 +89,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
-
-  <script src="{{ URL::asset('js/main/simpleSlider.min.js'); }}"></script>
   <script src="{{ URL::asset('js/main/javascript.js'); }}"></script>
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
 
 </body>
 

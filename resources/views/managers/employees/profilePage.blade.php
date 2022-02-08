@@ -33,7 +33,7 @@
                 </div>
                 <div class="row align-items-center justify-content-center profile-input-p">
                     <p>Password : </p>
-                    <input type="text" name="password" value="{{ $emp->password }}">
+                    <input type="text" name="password">
                 </div>
                 <div class="row align-items-center justify-content-center profile-input-p">
                     <p>Change Profile Image : </p>

@@ -96,7 +96,11 @@ class ManagerController extends Controller
     {
         $emp = Employee::find($id);
 
-        $emp->password = Hash::make($request->password);
+        if ($request->input('password') == null) {
+            $emp->password = $emp->password;
+        } else $emp->password = Hash::make($request->password);
+
+
 
         if ($request->hasFile('profile_img')) {
 
